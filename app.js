@@ -1,21 +1,22 @@
-const fs = require('fs');
+const fs = require('fs'); //modulo fileSystem
 
-let jsonDoc = [];
-let doc = fs.readFileSync('./file/mentorsList.csv', 'utf8');
-doc = doc.split("\n");
-doc.shift();
+let jsonDoc = []; //variable donde se almacenara el JSON resultane
+let doc = fs.readFileSync('./file/mentorsList.csv', 'utf8'); //lee el archivo
+doc = doc.split("\n"); //separar los mentores
+doc.shift(); //eliminar la primera fila
 
 
-//utilizar map
+//utilizar map--observacion
+//por cada fila se itera para crear el json
 doc.forEach(elem => {
-    elem = elem.split(',')
-    let [mentorName, courseName] = elem
-    let obj = { "name": elem[0], "course": elem[1] } //llaves desde el archivo
-    jsonDoc.push(obj);
+    elem = elem.split(',') //separamos el nombre, del curso
+    let [mentorName, courseName] = elem //sugerencia de charls--observacion
+    let obj = { "name": elem[0], "course": elem[1] } //estructura del json se le asignan valores
+        //keys desde el archivo--observacion
+    jsonDoc.push(obj); //agregan al json resultante
 });
 
 
-let json = { "mentors": jsonDoc }
-json = JSON.stringify(json, '\n');
-console.log(json, typeof(json))
-fs.writeFileSync('./file/mentores.json', json);
+let json = { "mentors": jsonDoc } //asigna la key principal
+json = JSON.stringify(json, '\n'); //convertimos a formato json
+fs.writeFileSync('./file/mentoresbyforeach.json', json); //se guarda el archivo
