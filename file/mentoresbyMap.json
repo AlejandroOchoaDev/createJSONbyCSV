@@ -1,28 +1,28 @@
 {
   "mentors": [
     {
-      "nombre": "Michael",
-      "curso": "React"
+      "Nombre": "Michael",
+      "Curso": "React"
     },
     {
-      "nombre": "Charles",
-      "curso": "Node"
+      "Nombre": "Charles",
+      "Curso": "Node"
     },
     {
-      "nombre": "Isra",
-      "curso": "Frontend"
+      "Nombre": "Isra",
+      "Curso": "Frontend"
     },
     {
-      "nombre": "Charlie",
-      "curso": "Cloud"
+      "Nombre": "Charlie",
+      "Curso": "Cloud"
     },
     {
-      "nombre": "Caro",
-      "curso": "Coaching"
+      "Nombre": "Caro",
+      "Curso": "Coaching"
     },
     {
-      "nombre": "David",
-      "curso": "javascript"
+      "Nombre": "David",
+      "Curso": "javascript"
     }
   ]
 }
